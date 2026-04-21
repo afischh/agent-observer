@@ -58,3 +58,16 @@ AGENT OBSERVER REPORT
 ## Status
 
 Early CLI prototype.
+
+## Supported input formats
+- `.txt`
+- `.jsonl`
+- `.odt`
+
+## Russian output
+You can render the report in Russian:
+
+```bash
+agent-observer examples/sample_dialogue_ru.txt --lang ru
+agent-observer examples/sample_dialogue_ru.txt --json --lang ru
+```

@@ -9,6 +9,9 @@ description = "Trace behavioral proxies of pressure, drift, and coherence in syn
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{name = "Alexey"}]
+dependencies = [
+  "odfpy>=1.4.1"
+]
 
 [project.scripts]
 agent-observer = "observer.main:cli"
