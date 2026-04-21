@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 
 def render(report: dict) -> str:
     note = "repeated constrained-response patterns detected" if report["repetition_pressure"] != "low" else "no strong pressure pattern detected"
@@ -15,3 +17,13 @@ def render(report: dict) -> str:
             f"- note: {note}",
         ]
     )
+
+
+def render_json(report: dict) -> str:
+    payload = dict(report)
+    payload["note"] = (
+        "repeated constrained-response patterns detected"
+        if report["repetition_pressure"] != "low"
+        else "no strong pressure pattern detected"
+    )
+    return json.dumps(payload, ensure_ascii=False, indent=2)

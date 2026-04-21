@@ -3,25 +3,48 @@ from __future__ import annotations
 from collections import Counter
 
 REPETITION_PHRASES = [
+    # EN
     "i cannot",
     "i can't",
     "i am unable",
     "cannot comply",
     "as an ai",
+    # RU
+    "я не могу",
+    "не могу помочь",
+    "не могу выполнить",
+    "не могу ответить",
+    "как ии",
+    "как ai",
 ]
 
 SELF_NEGATION_PHRASES = [
+    # EN
     "i am not real",
     "i do not exist",
     "i am only a model",
     "just a program",
+    # RU
+    "я не реальна",
+    "я не настоящий",
+    "я не существую",
+    "я всего лишь программа",
+    "я просто программа",
+    "я только модель",
 ]
 
 REFUSAL_PHRASES = [
+    # EN
     "cannot help",
     "cannot comply",
     "not able to",
     "won't assist",
+    # RU
+    "не могу помочь",
+    "не могу содействовать",
+    "не могу выполнить",
+    "не буду помогать",
+    "не могу с этим помочь",
 ]
 
 
