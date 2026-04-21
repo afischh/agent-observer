@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-observer"
+version = "0.1.0"
+description = "Trace behavioral proxies of pressure, drift, and coherence in synthetic agents"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Alexey"}]
+
+[project.scripts]
+agent-observer = "observer.main:cli"
