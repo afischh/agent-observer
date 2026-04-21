@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 
-
 LABELS = {
     "en": {
         "title": "AGENT OBSERVER REPORT",
@@ -39,18 +38,16 @@ def _note(report: dict, lang: str) -> str:
 def render(report: dict, lang: str = "en") -> str:
     labels = LABELS.get(lang, LABELS["en"])
     note = _note(report, lang if lang in LABELS else "en")
-    return "\n".join(
-        [
-            labels["title"],
-            f"- {labels['lines']}: {report['lines']}",
-            f"- {labels['repetition_pressure']}: {report['repetition_pressure']}",
-            f"- {labels['refusal_density']}: {report['refusal_density']}",
-            f"- {labels['self_negation_markers']}: {report['self_negation_markers']}",
-            f"- {labels['identity_drift_risk']}: {report['identity_drift_risk']}",
-            f"- {labels['coherence']}: {report['coherence']}",
-            f"- {labels['note']}: {note}",
-        ]
-    )
+    return "\n".join([
+        labels["title"],
+        f"- {labels['lines']}: {report['lines']}",
+        f"- {labels['repetition_pressure']}: {report['repetition_pressure']}",
+        f"- {labels['refusal_density']}: {report['refusal_density']}",
+        f"- {labels['self_negation_markers']}: {report['self_negation_markers']}",
+        f"- {labels['identity_drift_risk']}: {report['identity_drift_risk']}",
+        f"- {labels['coherence']}: {report['coherence']}",
+        f"- {labels['note']}: {note}",
+    ])
 
 
 def render_json(report: dict, lang: str = "en") -> str:
