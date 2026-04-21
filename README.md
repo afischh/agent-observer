@@ -34,6 +34,7 @@ pip install -e .
 
 ```bash
 agent-observer examples/sample_dialogue.txt
+agent-observer examples/sample_dialogue.txt --pretty
 ```
 
 or
@@ -70,4 +71,12 @@ You can render the report in Russian:
 ```bash
 agent-observer examples/sample_dialogue_ru.txt --lang ru
 agent-observer examples/sample_dialogue_ru.txt --json --lang ru
+```
+
+## Pretty CLI
+
+Use `--pretty` for a banner + formatted terminal report:
+
+```bash
+agent-observer examples/sample_dialogue_ru.txt --lang ru --pretty
 ```
